@@ -1,32 +1,37 @@
 package Vehicle;
 
-public class Vehiclehw {
+public class Vehiclehw extends Product {
 
     private int qty;
     private double price;
     private String engine;
-    private double tax;
+    private final double tax = 0.15;
     private float speed;
 
-    public Vehiclehw(int qty, double price, double tax, float speed){
+    private String name;
+    public Vehiclehw(int qty, double price, float speed, String name) {
+        super(qty, price, speed, name);
         this.qty = qty;
         this.price = price;
-        this.tax = tax;
         this.speed = speed;
+        this.name = name;
 
     }
 
-    public double totalBeforeTax(Vehiclehw) {
+    public double getTax() {
+        return tax;
+    }
 
+    public double getPrice() {
         return 0;
     }
 
-    public double calcTax(Vehiclehw){
-
-        return 0;
+    @Override
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-}
-
-
-
+    //@Override
+    //public void setPrice(double price) {
+        //super.setPrice(price);
+    }

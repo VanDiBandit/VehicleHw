@@ -1,6 +1,6 @@
 package Vehicle;
 
-class Engine extends Vehiclehw {
+class Engine {
 
     private int numOfCylinders;
 
